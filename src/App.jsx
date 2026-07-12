@@ -13,8 +13,13 @@ const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 // Embed Links
-const getMovieEmbedUrl = (tmdbId) => `https://vidsrc.sbs/embed/movie/${tmdbId}`;
-const getTvEmbedUrl = (tmdbId, season, episode) => `https://vidsrc.sbs/embed/tv/${tmdbId}/${season}/${episode}`;
+const getMovieEmbedUrl = (tmdbId) => {
+  return "https://vidsrc.sbs/embed/movie/" + tmdbId;
+};
+
+const getTvEmbedUrl = (tmdbId, season, episode) => {
+  return "https://vidsrc.sbs/embed/tv/" + tmdbId + "/" + season + "/" + episode;
+};
 
 // --- UTILS ---
 const fetchApi = async (endpoint) => {
